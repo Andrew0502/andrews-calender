@@ -16,6 +16,9 @@ console.log(currentHour);
 
 var timeArray = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
 
+for(var i = 0; i < timeArray.length; i++) {
+    var newRow = $("<div class= 'row time-block'>");
+    var hourDisplay = $("<div class ='col-sm-2 hour'>").text(timeArray[i] + ":00");
 
 // on click actions
 
