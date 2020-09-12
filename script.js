@@ -19,6 +19,16 @@ var timeArray = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
 for(var i = 0; i < timeArray.length; i++) {
     var newRow = $("<div class= 'row time-block'>");
     var hourDisplay = $("<div class ='col-sm-2 hour'>").text(timeArray[i] + ":00");
+    var scriptSpace = $("<textarea class ='col-sm-8 description'>");
+    scriptSpace.attr("data-hour", timeArray[i]);
+    
+    if( currentHour > scriptSpace.attr("data-hour")){
+        scriptSpace.addClass("past");
+    } else if(currentHour == scriptSpace.attr("data-hour")){
+        scriptSpace.addClass("present");
+    } else {
+        scriptSpace.addClass("future");
+    }
 
 // on click actions
 
