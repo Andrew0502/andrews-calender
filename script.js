@@ -24,7 +24,9 @@ for(var i = 0; i < timeArray.length; i++) {
         scriptSpace.addClass("future");
     }
 
-    
+    if(localStorage.getItem(timeArray[i]) != null){
+    scriptSpace.text(localStorage.getItem(timeArray[i]));
+    }
 
     var saveButt = $("<button class = 'col-sm-2 saveBtn fas fa-save'>").text("Save");
     saveButt.attr("data-hour", timeArray[i]);
@@ -33,9 +35,6 @@ for(var i = 0; i < timeArray.length; i++) {
     $(".container").append(newRow)
 }
 
-if(localStorage.getItem(timeArray[i]) != null){
-    scriptSpace.text(localStorage.getItem(timeArray[i]));
-    }
 
 $(document).on("click", ".saveBtn", function(){
     console.log("I did something.");
