@@ -2,11 +2,11 @@
 $(document).ready(function(){
 
 const today = moment();
-
+// var currentHour = moment().format("HH");
 var currentHour = 13;
 
-
-console.log(currentHour);
+// Puts date on page.
+$("#currentDay").text(moment().format('dddd, MMMM Do YYYY'));
 
 var timeArray = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
 
@@ -24,22 +24,23 @@ for(var i = 0; i < timeArray.length; i++) {
         scriptSpace.addClass("future");
     }
 
-    var saveButt = $("<button class = 'col-sm-2 saveBtn'>").text("Save");
+    var saveButt = $("<button class = 'col-sm-2 saveBtn fas fa-save'>").text("Save");
     saveButt.attr("data-hour", timeArray[i]);
     
     newRow.append(hourDisplay, scriptSpace, saveButt)
     $(".container").append(newRow)
 }
 
-// on click actions
 
 $(document).on("click", ".saveBtn", function(){
     console.log("I did something.");
+    var savedHour = $(this).attr("data-hour");
+    var savedText = $(this).siblings(".description").val();
+
+    localStorage.setItem
+
+
 })
-
-// Puts date on page.
-$("#currentDay").text(moment().format('dddd, MMMM Do YYYY'));
-
 
 
 
