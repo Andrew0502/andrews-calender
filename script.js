@@ -1,16 +1,10 @@
 // variables
+$(document).ready(function(){
+
 const today = moment();
-// var currentHour = moment().hour();
+
 var currentHour = 13;
-// var nineAM = moment().hour(9);
-// var tenAm = moment().hour('10');
-// var elevenAm = moment().hour('11');
-// var twelvePM = moment().hour('12');
-// var onePM = moment().hour('13');
-// var twoPM = moment().hour('14');
-// var threePM = moment().hour('15');
-// var fourPM = moment().hour('16');
-// var fivePM = moment().hour('17');
+
 
 console.log(currentHour);
 
@@ -39,21 +33,15 @@ for(var i = 0; i < timeArray.length; i++) {
 
 // on click actions
 
-// $(".saveBtn").on("click", inputSave);
+$(document).on("click", ".saveBtn", function(){
+    console.log("I did something.");
+})
 
 // Puts date on page.
 $("#currentDay").text(moment().format('dddd, MMMM Do YYYY'));
 
 
-// if(currentHour > nineAM){
-//     console.log("test")
-//     $("#9AM").addClass("past");
-// } else if (currentHour == nineAM){
-//     console.log("test-2")
-//     $("#9AM").addClass("present");
-// } else if (currentHour < nineAM){
-//     $("9AM").addClass("future")
-// }
+
 
 
 //Jason O's pseudo code notes.
