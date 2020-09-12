@@ -21,7 +21,7 @@ for(var i = 0; i < timeArray.length; i++) {
     var hourDisplay = $("<div class ='col-sm-2 hour'>").text(timeArray[i] + ":00");
     var scriptSpace = $("<textarea class ='col-sm-8 description'>");
     scriptSpace.attr("data-hour", timeArray[i]);
-    
+
     if( currentHour > scriptSpace.attr("data-hour")){
         scriptSpace.addClass("past");
     } else if(currentHour == scriptSpace.attr("data-hour")){
@@ -29,6 +29,13 @@ for(var i = 0; i < timeArray.length; i++) {
     } else {
         scriptSpace.addClass("future");
     }
+
+    var saveButt = $("<button class = 'col-sm-2 saveBtn'>").text("Save");
+    saveButt.attr("data-hour", timeArray[i]);
+    
+    newRow.append(hourDisplay, scriptSpace, saveButt)
+    $(".container").append(newRow)
+}
 
 // on click actions
 
