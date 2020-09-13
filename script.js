@@ -1,9 +1,9 @@
 // variables
 $(document).ready(function(){
 
-const today = moment();
-// var currentHour = moment().format("HH");
-var currentHour = 13;
+var currentHour = moment().format("HH");
+// var currentHour = 13;
+// The above commented out version of the currentHour variable is for testing purposes.
 
 // Puts date on page.
 $("#currentDay").text(moment().format('dddd, MMMM Do YYYY'));
